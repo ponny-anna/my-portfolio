@@ -24,9 +24,8 @@ class Navbar extends Component {
           <Toolbar>
             <Typography variant="title" color="inherit" className={classes.grow}>Ponny Anna Portfolio</Typography>
             <Link to="/"><Tab label={<span className={classes.link}>Top</span>} /></Link>
-            <Link to="/about"><Tab label={<span className={classes.link}>Profile</span>} /></Link>
+            <Link to="/profile"><Tab label={<span className={classes.link}>Profile</span>} /></Link>
             <Link to="/skill"><Tab label={<span className={classes.link}>Skill</span>} /></Link>
-            <Link to="contact"><Tab label={<span className={classes.link}>Contact</span>} /></Link>
           </Toolbar>
         </AppBar>
       </div>
