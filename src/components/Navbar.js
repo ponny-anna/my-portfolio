@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import { AppBar, Toolbar, Tab, Typography } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 const styles = {
   grow: {
     flexGrow: 1,
+  },
+  link: {
+    fontSize: "18px",
+    fontWeight: "bold"
   }
 }
 
@@ -18,10 +23,10 @@ class Navbar extends Component {
         <AppBar position="static" color="default">
           <Toolbar>
             <Typography variant="title" color="inherit" className={classes.grow}>Ponny Anna Portfolio</Typography>
-            <Tab label="About" />
-            <Tab label="Carried" />
-            <Tab label="Skill" />
-            <Tab label="Contact" />
+            <Link to="/"><Tab label={<span className={classes.link}>Top</span>} /></Link>
+            <Link to="/about"><Tab label={<span className={classes.link}>Profile</span>} /></Link>
+            <Link to="/skill"><Tab label={<span className={classes.link}>Skill</span>} /></Link>
+            <Link to="contact"><Tab label={<span className={classes.link}>Contact</span>} /></Link>
           </Toolbar>
         </AppBar>
       </div>
